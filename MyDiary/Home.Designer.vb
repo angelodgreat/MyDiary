@@ -22,16 +22,11 @@ Partial Class Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim TableViewDefinition10 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition11 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition12 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
         Me.rpvi_header = New Telerik.WinControls.UI.RadPageViewItemPage()
-        Me.rpv_home = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.lbl_accountmodifier = New Telerik.WinControls.UI.RadLabel()
-        Me.btn_home_print = New Telerik.WinControls.UI.RadButton()
-        Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.rgv_home = New Telerik.WinControls.UI.RadGridView()
         Me.rpv_ropa = New Telerik.WinControls.UI.RadPageViewPage()
         Me.RadGroupBox3 = New Telerik.WinControls.UI.RadGroupBox()
         Me.rgv_ropa = New Telerik.WinControls.UI.RadGridView()
@@ -75,16 +70,15 @@ Partial Class Home
         Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
         Me.reg_username = New Telerik.WinControls.UI.RadTextBox()
         Me.VisualStudio2012DarkTheme1 = New Telerik.WinControls.Themes.VisualStudio2012DarkTheme()
+        Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.btn_home_print = New Telerik.WinControls.UI.RadButton()
+        Me.lbl_accountmodifier = New Telerik.WinControls.UI.RadLabel()
         Me.lbl_usernaaaaa = New Telerik.WinControls.UI.RadLabel()
+        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
+        Me.rpv_home = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.rgv_home = New Telerik.WinControls.UI.RadGridView()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageView1.SuspendLayout()
-        Me.rpv_home.SuspendLayout()
-        CType(Me.lbl_accountmodifier, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btn_home_print, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBox1.SuspendLayout()
-        CType(Me.rgv_home, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.rgv_home.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.rpv_ropa.SuspendLayout()
         CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox3.SuspendLayout()
@@ -135,7 +129,15 @@ Partial Class Home
         CType(Me.reg_password, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.reg_username, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox1.SuspendLayout()
+        CType(Me.btn_home_print, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lbl_accountmodifier, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lbl_usernaaaaa, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.rpv_home.SuspendLayout()
+        CType(Me.rgv_home, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rgv_home.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -148,7 +150,7 @@ Partial Class Home
         Me.RadPageView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RadPageView1.Location = New System.Drawing.Point(0, 0)
         Me.RadPageView1.Name = "RadPageView1"
-        Me.RadPageView1.SelectedPage = Me.rpv_accounts
+        Me.RadPageView1.SelectedPage = Me.rpv_home
         Me.RadPageView1.Size = New System.Drawing.Size(1081, 588)
         Me.RadPageView1.TabIndex = 0
         Me.RadPageView1.Text = "RadPageView1"
@@ -163,72 +165,6 @@ Partial Class Home
         Me.rpvi_header.Name = "rpvi_header"
         Me.rpvi_header.Size = New System.Drawing.Size(0, 0)
         Me.rpvi_header.Text = "ROPA System"
-        '
-        'rpv_home
-        '
-        Me.rpv_home.Controls.Add(Me.lbl_usernaaaaa)
-        Me.rpv_home.Controls.Add(Me.lbl_accountmodifier)
-        Me.rpv_home.Controls.Add(Me.btn_home_print)
-        Me.rpv_home.Controls.Add(Me.RadGroupBox1)
-        Me.rpv_home.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.rpv_home.ItemSize = New System.Drawing.SizeF(119.0!, 26.0!)
-        Me.rpv_home.Location = New System.Drawing.Point(205, 4)
-        Me.rpv_home.Name = "rpv_home"
-        Me.rpv_home.Size = New System.Drawing.Size(872, 580)
-        Me.rpv_home.Text = "Home"
-        '
-        'lbl_accountmodifier
-        '
-        Me.lbl_accountmodifier.Location = New System.Drawing.Point(251, 8)
-        Me.lbl_accountmodifier.Name = "lbl_accountmodifier"
-        Me.lbl_accountmodifier.Size = New System.Drawing.Size(64, 18)
-        Me.lbl_accountmodifier.TabIndex = 3
-        Me.lbl_accountmodifier.Text = "RadLabel13"
-        Me.lbl_accountmodifier.ThemeName = "VisualStudio2012Dark"
-        '
-        'btn_home_print
-        '
-        Me.btn_home_print.Location = New System.Drawing.Point(765, 552)
-        Me.btn_home_print.Name = "btn_home_print"
-        Me.btn_home_print.Size = New System.Drawing.Size(92, 24)
-        Me.btn_home_print.TabIndex = 1
-        Me.btn_home_print.Text = "Print"
-        Me.btn_home_print.ThemeName = "VisualStudio2012Dark"
-        '
-        'RadGroupBox1
-        '
-        Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox1.Controls.Add(Me.rgv_home)
-        Me.RadGroupBox1.HeaderText = "Record of Practicum Activity"
-        Me.RadGroupBox1.Location = New System.Drawing.Point(0, 44)
-        Me.RadGroupBox1.Name = "RadGroupBox1"
-        Me.RadGroupBox1.Size = New System.Drawing.Size(857, 502)
-        Me.RadGroupBox1.TabIndex = 0
-        Me.RadGroupBox1.Text = "Record of Practicum Activity"
-        Me.RadGroupBox1.ThemeName = "VisualStudio2012Dark"
-        '
-        'rgv_home
-        '
-        Me.rgv_home.AutoSizeRows = True
-        Me.rgv_home.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rgv_home.Location = New System.Drawing.Point(2, 18)
-        '
-        '
-        '
-        Me.rgv_home.MasterTemplate.AllowAddNewRow = False
-        Me.rgv_home.MasterTemplate.AllowDeleteRow = False
-        Me.rgv_home.MasterTemplate.AllowDragToGroup = False
-        Me.rgv_home.MasterTemplate.AllowEditRow = False
-        Me.rgv_home.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        Me.rgv_home.MasterTemplate.EnableGrouping = False
-        Me.rgv_home.MasterTemplate.ShowRowHeaderColumn = False
-        Me.rgv_home.MasterTemplate.ViewDefinition = TableViewDefinition10
-        Me.rgv_home.Name = "rgv_home"
-        Me.rgv_home.ReadOnly = True
-        Me.rgv_home.Size = New System.Drawing.Size(853, 482)
-        Me.rgv_home.TabIndex = 0
-        Me.rgv_home.Text = "RadGridView1"
-        Me.rgv_home.ThemeName = "VisualStudio2012Dark"
         '
         'rpv_ropa
         '
@@ -265,11 +201,12 @@ Partial Class Home
         Me.rgv_ropa.MasterTemplate.AllowAddNewRow = False
         Me.rgv_ropa.MasterTemplate.AllowDeleteRow = False
         Me.rgv_ropa.MasterTemplate.AllowEditRow = False
+        Me.rgv_ropa.MasterTemplate.AllowRowReorder = True
         Me.rgv_ropa.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
         Me.rgv_ropa.MasterTemplate.EnableCustomGrouping = True
         Me.rgv_ropa.MasterTemplate.EnableGrouping = False
         Me.rgv_ropa.MasterTemplate.ShowRowHeaderColumn = False
-        Me.rgv_ropa.MasterTemplate.ViewDefinition = TableViewDefinition11
+        Me.rgv_ropa.MasterTemplate.ViewDefinition = TableViewDefinition5
         Me.rgv_ropa.Name = "rgv_ropa"
         Me.rgv_ropa.ReadOnly = True
         Me.rgv_ropa.ShowGroupPanel = False
@@ -639,7 +576,7 @@ Partial Class Home
         Me.rgv_accounts.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
         Me.rgv_accounts.MasterTemplate.EnableGrouping = False
         Me.rgv_accounts.MasterTemplate.ShowRowHeaderColumn = False
-        Me.rgv_accounts.MasterTemplate.ViewDefinition = TableViewDefinition12
+        Me.rgv_accounts.MasterTemplate.ViewDefinition = TableViewDefinition6
         Me.rgv_accounts.Name = "rgv_accounts"
         Me.rgv_accounts.ReadOnly = True
         Me.rgv_accounts.ShowGroupPanel = False
@@ -732,6 +669,36 @@ Partial Class Home
         Me.reg_username.TabIndex = 7
         Me.reg_username.ThemeName = "VisualStudio2012Dark"
         '
+        'RadGroupBox1
+        '
+        Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox1.Controls.Add(Me.rgv_home)
+        Me.RadGroupBox1.HeaderText = "Record of Practicum Activity"
+        Me.RadGroupBox1.Location = New System.Drawing.Point(0, 44)
+        Me.RadGroupBox1.Name = "RadGroupBox1"
+        Me.RadGroupBox1.Size = New System.Drawing.Size(864, 502)
+        Me.RadGroupBox1.TabIndex = 0
+        Me.RadGroupBox1.Text = "Record of Practicum Activity"
+        Me.RadGroupBox1.ThemeName = "VisualStudio2012Dark"
+        '
+        'btn_home_print
+        '
+        Me.btn_home_print.Location = New System.Drawing.Point(772, 550)
+        Me.btn_home_print.Name = "btn_home_print"
+        Me.btn_home_print.Size = New System.Drawing.Size(92, 24)
+        Me.btn_home_print.TabIndex = 1
+        Me.btn_home_print.Text = "Print"
+        Me.btn_home_print.ThemeName = "VisualStudio2012Dark"
+        '
+        'lbl_accountmodifier
+        '
+        Me.lbl_accountmodifier.Location = New System.Drawing.Point(251, 8)
+        Me.lbl_accountmodifier.Name = "lbl_accountmodifier"
+        Me.lbl_accountmodifier.Size = New System.Drawing.Size(64, 18)
+        Me.lbl_accountmodifier.TabIndex = 3
+        Me.lbl_accountmodifier.Text = "RadLabel13"
+        Me.lbl_accountmodifier.ThemeName = "VisualStudio2012Dark"
+        '
         'lbl_usernaaaaa
         '
         Me.lbl_usernaaaaa.Location = New System.Drawing.Point(3, 8)
@@ -740,6 +707,51 @@ Partial Class Home
         Me.lbl_usernaaaaa.TabIndex = 4
         Me.lbl_usernaaaaa.Text = "RadLabel13"
         Me.lbl_usernaaaaa.ThemeName = "VisualStudio2012Dark"
+        '
+        'RadButton1
+        '
+        Me.RadButton1.Location = New System.Drawing.Point(752, 14)
+        Me.RadButton1.Name = "RadButton1"
+        Me.RadButton1.Size = New System.Drawing.Size(110, 24)
+        Me.RadButton1.TabIndex = 5
+        Me.RadButton1.Text = "Logout"
+        Me.RadButton1.ThemeName = "VisualStudio2012Dark"
+        '
+        'rpv_home
+        '
+        Me.rpv_home.Controls.Add(Me.RadButton1)
+        Me.rpv_home.Controls.Add(Me.lbl_usernaaaaa)
+        Me.rpv_home.Controls.Add(Me.lbl_accountmodifier)
+        Me.rpv_home.Controls.Add(Me.btn_home_print)
+        Me.rpv_home.Controls.Add(Me.RadGroupBox1)
+        Me.rpv_home.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.rpv_home.ItemSize = New System.Drawing.SizeF(119.0!, 26.0!)
+        Me.rpv_home.Location = New System.Drawing.Point(205, 4)
+        Me.rpv_home.Name = "rpv_home"
+        Me.rpv_home.Size = New System.Drawing.Size(872, 580)
+        Me.rpv_home.Text = "Home"
+        '
+        'rgv_home
+        '
+        Me.rgv_home.AutoSizeRows = True
+        Me.rgv_home.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.rgv_home.Location = New System.Drawing.Point(2, 18)
+        '
+        '
+        '
+        Me.rgv_home.MasterTemplate.AllowAddNewRow = False
+        Me.rgv_home.MasterTemplate.AllowEditRow = False
+        Me.rgv_home.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
+        Me.rgv_home.MasterTemplate.EnableGrouping = False
+        Me.rgv_home.MasterTemplate.ShowRowHeaderColumn = False
+        Me.rgv_home.MasterTemplate.ViewDefinition = TableViewDefinition4
+        Me.rgv_home.Name = "rgv_home"
+        Me.rgv_home.ReadOnly = True
+        Me.rgv_home.ShowGroupPanel = False
+        Me.rgv_home.Size = New System.Drawing.Size(860, 482)
+        Me.rgv_home.TabIndex = 0
+        Me.rgv_home.Text = "RadGridView1"
+        Me.rgv_home.ThemeName = "VisualStudio2012Dark"
         '
         'Home
         '
@@ -758,14 +770,6 @@ Partial Class Home
         Me.ThemeName = "VisualStudio2012Dark"
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPageView1.ResumeLayout(False)
-        Me.rpv_home.ResumeLayout(False)
-        Me.rpv_home.PerformLayout()
-        CType(Me.lbl_accountmodifier, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btn_home_print, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBox1.ResumeLayout(False)
-        CType(Me.rgv_home.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.rgv_home, System.ComponentModel.ISupportInitialize).EndInit()
         Me.rpv_ropa.ResumeLayout(False)
         CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox3.ResumeLayout(False)
@@ -819,18 +823,24 @@ Partial Class Home
         CType(Me.reg_password, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.reg_username, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox1.ResumeLayout(False)
+        CType(Me.btn_home_print, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lbl_accountmodifier, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lbl_usernaaaaa, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.rpv_home.ResumeLayout(False)
+        Me.rpv_home.PerformLayout()
+        CType(Me.rgv_home.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rgv_home, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents RadPageView1 As Telerik.WinControls.UI.RadPageView
-    Friend WithEvents rpv_home As Telerik.WinControls.UI.RadPageViewPage
-    Friend WithEvents RadGroupBox1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents rpv_ropa As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents rpv_accounts As Telerik.WinControls.UI.RadPageViewPage
-    Friend WithEvents rgv_home As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadGroupBox3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents rgv_ropa As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadGroupBox2 As Telerik.WinControls.UI.RadGroupBox
@@ -865,7 +875,6 @@ Partial Class Home
     Friend WithEvents RadLabel12 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadGroupBox5 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents rgv_accounts As Telerik.WinControls.UI.RadGridView
-    Friend WithEvents btn_home_print As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadGroupBox6 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents reg_address As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents VisualStudio2012DarkTheme1 As Telerik.WinControls.Themes.VisualStudio2012DarkTheme
@@ -874,7 +883,12 @@ Partial Class Home
     Friend WithEvents btn_accdel As Telerik.WinControls.UI.RadButton
     Friend WithEvents btn_accreg As Telerik.WinControls.UI.RadButton
     Friend WithEvents btn_accupdate As Telerik.WinControls.UI.RadButton
-    Friend WithEvents lbl_accountmodifier As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents rpv_home As Telerik.WinControls.UI.RadPageViewPage
+    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
     Friend WithEvents lbl_usernaaaaa As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lbl_accountmodifier As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents btn_home_print As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadGroupBox1 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents rgv_home As Telerik.WinControls.UI.RadGridView
 End Class
 

@@ -12,12 +12,13 @@
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ropa_records" msprop:Generator_TableClassName="ropa_recordsDataTable" msprop:Generator_TableVarName="tableropa_records" msprop:Generator_TablePropName="ropa_records" msprop:Generator_RowDeletingName="ropa_recordsRowDeleting" msprop:Generator_RowChangingName="ropa_recordsRowChanging" msprop:Generator_RowEvHandlerName="ropa_recordsRowChangeEventHandler" msprop:Generator_RowDeletedName="ropa_recordsRowDeleted" msprop:Generator_UserTableName="ropa_records" msprop:Generator_RowChangedName="ropa_recordsRowChanged" msprop:Generator_RowEvArgName="ropa_recordsRowChangeEvent" msprop:Generator_RowClassName="ropa_recordsRow">
+        <xs:element name="ropa_records" msprop:Generator_TableClassName="ropa_recordsDataTable" msprop:Generator_TableVarName="tableropa_records" msprop:Generator_RowChangedName="ropa_recordsRowChanged" msprop:Generator_TablePropName="ropa_records" msprop:Generator_RowDeletingName="ropa_recordsRowDeleting" msprop:Generator_RowChangingName="ropa_recordsRowChanging" msprop:Generator_RowEvHandlerName="ropa_recordsRowChangeEventHandler" msprop:Generator_RowDeletedName="ropa_recordsRowDeleted" msprop:Generator_RowClassName="ropa_recordsRow" msprop:Generator_UserTableName="ropa_records" msprop:Generator_RowEvArgName="ropa_recordsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="_date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:string" minOccurs="0" />
               <xs:element name="activities" msprop:Generator_ColumnVarNameInTable="columnactivities" msprop:Generator_ColumnPropNameInRow="activities" msprop:Generator_ColumnPropNameInTable="activitiesColumn" msprop:Generator_UserColumnName="activities" type="xs:string" minOccurs="0" />
               <xs:element name="hours" msprop:Generator_ColumnVarNameInTable="columnhours" msprop:Generator_ColumnPropNameInRow="hours" msprop:Generator_ColumnPropNameInTable="hoursColumn" msprop:Generator_UserColumnName="hours" type="xs:string" minOccurs="0" />
+              <xs:element name="studno" msprop:Generator_ColumnVarNameInTable="columnstudno" msprop:Generator_ColumnPropNameInRow="studno" msprop:Generator_ColumnPropNameInTable="studnoColumn" msprop:Generator_UserColumnName="studno" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

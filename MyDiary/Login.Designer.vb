@@ -95,7 +95,7 @@ Partial Class Login
         Me.btn_login.Name = "btn_login"
         Me.btn_login.Size = New System.Drawing.Size(110, 24)
         Me.btn_login.TabIndex = 29
-        Me.btn_login.Text = "Log In"
+        Me.btn_login.Text = "Login"
         Me.btn_login.ThemeName = "VisualStudio2012Dark"
         '
         'tb_password

@@ -29,6 +29,7 @@ Public Class Home
         load_table_ROPA()
         load_table_accounts()
         rec_date.Value = DateTime.Now
+
     End Sub
 
     'subs for ROPA Grids
@@ -199,7 +200,7 @@ Public Class Home
                 Try
                     MysqlConn.Open()
                     Dim QUERY As String
-                    QUERY = "UPDATE ropa_records SET date='" & Format(CDate(rec_date.Value), "yyyy-MM-dd") & "',activities='" & rec_activities.Text & "',hours='" & rec_hours.Text & "'"
+                    QUERY = "UPDATE ropa_records SET date='" & Format(CDate(rec_date.Value), "yyyy-MM-dd") & "',activities='" & rec_activities.Text & "',hours='" & rec_hours.Text & "' where date='" & Format(CDate(rec_date.Value), "yyyy-MM-dd") & "' and studno='" & lbl_usernaaaaa.Text & "'"
                     COMMAND = New MySqlCommand(QUERY, MysqlConn)
                     reader = COMMAND.ExecuteReader
                     RadMessageBox.Show(Me, "ROPA Updated!", "ROPA Management", MessageBoxButtons.OK, RadMessageIcon.Info)
@@ -374,6 +375,11 @@ Public Class Home
 
     Private Sub Home_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Application.Exit()
+    End Sub
+
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+        Login.Show()
+        Me.Dispose()
     End Sub
 
 

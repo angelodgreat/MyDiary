@@ -289,6 +289,8 @@ Partial Public Class DataSet1
         
         Private columnhours As Global.System.Data.DataColumn
         
+        Private columnstudno As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -349,6 +351,14 @@ Partial Public Class DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property studnoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnstudno
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -385,9 +395,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addropa_recordsRow(ByVal _date As String, ByVal activities As String, ByVal hours As String) As ropa_recordsRow
+        Public Overloads Function Addropa_recordsRow(ByVal _date As String, ByVal activities As String, ByVal hours As String, ByVal studno As String) As ropa_recordsRow
             Dim rowropa_recordsRow As ropa_recordsRow = CType(Me.NewRow,ropa_recordsRow)
-            Dim columnValuesArray() As Object = New Object() {_date, activities, hours}
+            Dim columnValuesArray() As Object = New Object() {_date, activities, hours, studno}
             rowropa_recordsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowropa_recordsRow)
             Return rowropa_recordsRow
@@ -413,6 +423,7 @@ Partial Public Class DataSet1
             Me.columndate = MyBase.Columns("date")
             Me.columnactivities = MyBase.Columns("activities")
             Me.columnhours = MyBase.Columns("hours")
+            Me.columnstudno = MyBase.Columns("studno")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -427,6 +438,8 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnactivities)
             Me.columnhours = New Global.System.Data.DataColumn("hours", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnhours)
+            Me.columnstudno = New Global.System.Data.DataColumn("studno", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnstudno)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -618,6 +631,21 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property studno() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableropa_records.studnoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'studno' in table 'ropa_records' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableropa_records.studnoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Is_dateNull() As Boolean
             Return Me.IsNull(Me.tableropa_records.dateColumn)
         End Function
@@ -650,6 +678,18 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SethoursNull()
             Me(Me.tableropa_records.hoursColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsstudnoNull() As Boolean
+            Return Me.IsNull(Me.tableropa_records.studnoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetstudnoNull()
+            Me(Me.tableropa_records.studnoColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

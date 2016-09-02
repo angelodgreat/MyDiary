@@ -1,12 +1,12 @@
 ﻿Imports Telerik.WinControls
 Imports MySql.Data.MySqlClient
 Public Class Login
-    Dim home As New Home
+
     Dim a As Boolean
     Dim mysqlconn As MySqlConnection
     Dim Command As MySqlCommand
-
-
+    Dim home2 As New Home
+    Dim printform As New PrintingForm
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         a = New Boolean
@@ -72,8 +72,10 @@ Public Class Login
 
                     If count >= 1 Then
                         RadMessageBox.Show(Me, "Welcome " & activeuserfname & " " & activeuserlname & "!", "ROPA Management", MessageBoxButtons.OK, RadMessageIcon.Info)
-                        home.lbl_accountmodifier.Text = "Welcome " & reader.GetString("fname") + " " + reader.GetString("lname")
-                        home.Show()
+
+                        home2.lbl_accountmodifier.Text = "Welcome " & reader.GetString("fname") + " " + reader.GetString("lname")
+
+                        home2.Show()
                         Me.Hide()
 
 

@@ -24,8 +24,14 @@ Partial Class PrintingForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem5 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Me.ropa_recordsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
+        Me.print_totalhours = New Telerik.WinControls.UI.RadTextBox()
+        Me.print_hourscomplete = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
@@ -34,11 +40,12 @@ Partial Class PrintingForm
         Me.print_date = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.print_hourscomplete = New Telerik.WinControls.UI.RadTextBox()
-        Me.print_totalhours = New Telerik.WinControls.UI.RadTextBox()
+        Me.lbl_printuser = New Telerik.WinControls.UI.RadLabel()
         CType(Me.ropa_recordsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
+        CType(Me.print_totalhours, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.print_hourscomplete, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,8 +54,7 @@ Partial Class PrintingForm
         CType(Me.print_date, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
-        CType(Me.print_hourscomplete, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.print_totalhours, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lbl_printuser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,6 +64,7 @@ Partial Class PrintingForm
         '
         'RadPanel1
         '
+        Me.RadPanel1.Controls.Add(Me.lbl_printuser)
         Me.RadPanel1.Controls.Add(Me.print_totalhours)
         Me.RadPanel1.Controls.Add(Me.print_hourscomplete)
         Me.RadPanel1.Controls.Add(Me.RadLabel4)
@@ -71,6 +78,34 @@ Partial Class PrintingForm
         Me.RadPanel1.Name = "RadPanel1"
         Me.RadPanel1.Size = New System.Drawing.Size(1121, 42)
         Me.RadPanel1.TabIndex = 1
+        '
+        'print_totalhours
+        '
+        Me.print_totalhours.Location = New System.Drawing.Point(875, 12)
+        Me.print_totalhours.MinimumSize = New System.Drawing.Size(0, 24)
+        Me.print_totalhours.Name = "print_totalhours"
+        '
+        '
+        '
+        Me.print_totalhours.RootElement.MinSize = New System.Drawing.Size(0, 24)
+        Me.print_totalhours.Size = New System.Drawing.Size(63, 24)
+        Me.print_totalhours.TabIndex = 11
+        Me.print_totalhours.Text = "450"
+        Me.print_totalhours.ThemeName = "VisualStudio2012Dark"
+        '
+        'print_hourscomplete
+        '
+        Me.print_hourscomplete.Location = New System.Drawing.Point(734, 10)
+        Me.print_hourscomplete.MinimumSize = New System.Drawing.Size(0, 24)
+        Me.print_hourscomplete.Name = "print_hourscomplete"
+        '
+        '
+        '
+        Me.print_hourscomplete.RootElement.MinSize = New System.Drawing.Size(0, 24)
+        Me.print_hourscomplete.Size = New System.Drawing.Size(63, 24)
+        Me.print_hourscomplete.TabIndex = 10
+        Me.print_hourscomplete.Text = "450"
+        Me.print_hourscomplete.ThemeName = "VisualStudio2012Dark"
         '
         'RadLabel4
         '
@@ -102,12 +137,19 @@ Partial Class PrintingForm
         'print_stud
         '
         RadListDataItem1.Text = "Umali, Christian Angelo R."
+        RadListDataItem2.Text = "Wu, Patrick Jenkin C."
+        RadListDataItem3.Text = "Hamili, Kail Andrew R."
+        RadListDataItem4.Text = "Tan, Junius Reginald T."
+        RadListDataItem5.Text = "Buenaventura, Brenz Paul V."
         Me.print_stud.Items.Add(RadListDataItem1)
+        Me.print_stud.Items.Add(RadListDataItem2)
+        Me.print_stud.Items.Add(RadListDataItem3)
+        Me.print_stud.Items.Add(RadListDataItem4)
+        Me.print_stud.Items.Add(RadListDataItem5)
         Me.print_stud.Location = New System.Drawing.Point(381, 11)
         Me.print_stud.Name = "print_stud"
         Me.print_stud.Size = New System.Drawing.Size(240, 24)
         Me.print_stud.TabIndex = 4
-        Me.print_stud.Text = "Student Name"
         Me.print_stud.ThemeName = "VisualStudio2012Dark"
         '
         'RadLabel1
@@ -156,25 +198,14 @@ Partial Class PrintingForm
         Me.ReportViewer1.Size = New System.Drawing.Size(1093, 515)
         Me.ReportViewer1.TabIndex = 0
         '
-        'print_hourscomplete
+        'lbl_printuser
         '
-        Me.print_hourscomplete.Location = New System.Drawing.Point(734, 10)
-        Me.print_hourscomplete.MinimumSize = New System.Drawing.Size(0, 24)
-        Me.print_hourscomplete.Name = "print_hourscomplete"
-        Me.print_hourscomplete.Size = New System.Drawing.Size(63, 24)
-        Me.print_hourscomplete.TabIndex = 10
-        Me.print_hourscomplete.Text = "450"
-        Me.print_hourscomplete.ThemeName = "VisualStudio2012Dark"
-        '
-        'print_totalhours
-        '
-        Me.print_totalhours.Location = New System.Drawing.Point(875, 12)
-        Me.print_totalhours.MinimumSize = New System.Drawing.Size(0, 24)
-        Me.print_totalhours.Name = "print_totalhours"
-        Me.print_totalhours.Size = New System.Drawing.Size(63, 24)
-        Me.print_totalhours.TabIndex = 11
-        Me.print_totalhours.Text = "450"
-        Me.print_totalhours.ThemeName = "VisualStudio2012Dark"
+        Me.lbl_printuser.Location = New System.Drawing.Point(994, 17)
+        Me.lbl_printuser.Name = "lbl_printuser"
+        Me.lbl_printuser.Size = New System.Drawing.Size(58, 18)
+        Me.lbl_printuser.TabIndex = 12
+        Me.lbl_printuser.Text = "RadLabel5"
+        Me.lbl_printuser.ThemeName = "VisualStudio2012Dark"
         '
         'PrintingForm
         '
@@ -196,6 +227,8 @@ Partial Class PrintingForm
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel1.ResumeLayout(False)
         Me.RadPanel1.PerformLayout()
+        CType(Me.print_totalhours, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.print_hourscomplete, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -204,8 +237,7 @@ Partial Class PrintingForm
         CType(Me.print_date, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
-        CType(Me.print_hourscomplete, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.print_totalhours, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lbl_printuser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -223,5 +255,6 @@ Partial Class PrintingForm
     Friend WithEvents RadLabel4 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents print_totalhours As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents print_hourscomplete As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents lbl_printuser As Telerik.WinControls.UI.RadLabel
 End Class
 

@@ -6,7 +6,9 @@ Public Class PrintingForm
 
 
     Private Sub PrintingForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lbl_printuser.Text = studno
         printreport()
+
         Me.ReportViewer1.RefreshReport()
 
 
@@ -23,8 +25,9 @@ Public Class PrintingForm
 
         Dim SDA As New MySqlDataAdapter
         Dim ds As New DataSet1
+        Dim home As New Home
 
-        SDA.SelectCommand = New MySqlCommand("Select DATE_FORMAT(date,'%M %d %Y') as 'Date', activities,hours from ropa_records", MySQLConn)
+        SDA.SelectCommand = New MySqlCommand("Select DATE_FORMAT(date,'%M %d %Y') as 'Date', activities,hours from ropa_records where studno='" & lbl_printuser.Text & "' ", MySQLConn)
         SDA.Fill(ds.Tables(0))
 
         ReportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local
